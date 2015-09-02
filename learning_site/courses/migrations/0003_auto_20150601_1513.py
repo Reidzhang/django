@@ -18,6 +18,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='step',
             name='content',
-            field=models.TextField(default=b'', blank=True),
+            field=models.TextField(blank=True, default=''),
         ),
     ]

@@ -13,13 +13,12 @@ class Course(models.Model):
 class Step(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField()
-    content = models.TextField(blank = True, default = '')
+    content = models.TextField(blank=True, default='')
     order = models.IntegerField(default=0)
     course = models.ForeignKey(Course)
-
-    # control the ordering
+    
     class Meta:
         ordering = ['order',]
-
+    
     def __str__(self):
         return self.title
